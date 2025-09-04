@@ -19,7 +19,7 @@ const Projects = () => {
       description: "Collaborative ToDo application with real-time Database.",
       technologies: ["Next.js", "MongoDB", "Rest API"],
       image: "/todoapp.png", 
-      liveUrl: "learning-next-sooty.vercel.app",
+      liveUrl: "https://learning-next-sooty.vercel.app/",
       githubUrl: "https://github.com/Hridayansh018/Learning-Next",
       featured: true
     },
