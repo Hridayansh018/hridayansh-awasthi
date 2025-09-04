@@ -1,13 +1,16 @@
 import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { RiTwitterXLine } from "react-icons/ri";
+import { FaGithub,FaLinkedin  } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Mail, href: "mailto:contact@portfolio.dev", label: "Email" },
+    { icon: FaGithub, href: "https://github.com/Hridayansh018", label: "GitHub" },
+    { icon: FaLinkedin , href: "https://www.linkedin.com/in/hridayansh-awasthi-0095a12b6/", label: "LinkedIn" },
+    { icon: RiTwitterXLine , href: "https://x.com/hridayansh018", label: "Twitter" },
+    { icon: IoIosMail, href: "mailto:work.with.hridayansh@gmail.com", label: "Email" },
   ];
 
   const quickLinks = [
@@ -44,6 +47,7 @@ const Footer = () => {
                   <li key={link.name}>
                     <a 
                       href={link.href}
+                      target="_blank"
                       className="text-muted-foreground font-tahoma text-sm hover:text-primary transition-colors duration-200"
                     >
                       {link.name}
