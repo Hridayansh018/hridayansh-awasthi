@@ -39,7 +39,7 @@ const About = () => {
                 Passionate Developer & Problem Solver
               </h3>
               <p className="text-lg font-tahoma text-muted-foreground mb-6 leading-relaxed">
-                With over 5 years of experience in full-stack development, I specialize in creating 
+                With over 1.5 years of experience in full-stack development, I specialize in creating 
                 robust, scalable applications that deliver exceptional user experiences. My journey 
                 spans from startups to enterprise solutions, always focusing on clean architecture 
                 and innovative problem-solving.
