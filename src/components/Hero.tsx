@@ -74,6 +74,16 @@ const Hero = () => {
               >
                 <Mail size={24} />
               </button>
+
+              <button className=" bg-cyan-500 font-mono text-white font-semibold mx-3 px-3 text-md text-wrap w-20 rounded-sm">
+                <a href="/Hridayansh-Resume-WebDev.pdf" 
+                  download="Hridayansh_Awasthi_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                    Resume
+                  </a>
+              </button>
+
             </div>
           </div>
         </div>
