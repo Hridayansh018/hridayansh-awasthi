@@ -32,7 +32,7 @@ const Projects = () => {
         "Python"
       ],
       image: "/resume-analyzer.png",
-      liveUrl: "#",
+      liveUrl: "https://resume-analyzer-henna-gamma.vercel.app/",
       githubUrl: "https://github.com/Hridayansh018/resume-analyzer",
       featured: true
     },
@@ -47,8 +47,8 @@ const Projects = () => {
         "LLMs",
         "OpenAI"
       ],
-      image: "/ai-chatbot.png",
-      liveUrl: "#",
+      image: "/ai-chat.png",
+      liveUrl: "https://ai-chatbot-client-six.vercel.app/",
       githubUrl: "https://github.com/Hridayansh018/ai_chatbot",
       featured: true
     },
@@ -56,15 +56,15 @@ const Projects = () => {
     {
       title: "NeuralDesk",
       description:
-        "AI-focused productivity platform built with Next.js and TypeScript featuring intelligent workflows, scalable architecture, and reusable components.",
+        "A Retrieval-Augmented Generation (RAG) chatbot that answers employee questions using company knowledge base documents. Built with FastAPI, FAISS vector search, LLM inference via OpenRouter, and a dark-themed chat UI.",
       technologies: [
-        "Next.js",
-        "TypeScript",
-        "AI",
-        "Tailwind CSS"
+        "FastAPI",
+        "Python",
+        "LLMs",
+        "OpenAI"
       ],
       image: "/neuraldesk.png",
-      liveUrl: "#",
+      liveUrl: "https://neuraldesk-kappa.vercel.app/",
       githubUrl: "https://github.com/Hridayansh018/neuraldesk",
       featured: true
     },
@@ -79,8 +79,8 @@ const Projects = () => {
         "TypeScript",
         "Real-Time Systems"
       ],
-      image: "/mind-sprint.png",
-      liveUrl: "#",
+      image: "/mindsprint.png",
+      liveUrl: "https://mind-sprint-eight.vercel.app/",
       githubUrl: "https://github.com/Hridayansh018/mind-sprint",
       featured: true
     },
@@ -88,15 +88,15 @@ const Projects = () => {
     {
       title: "Nexus Chat",
       description:
-        "Modern real-time messaging platform with responsive UI, live communication, efficient state management, and scalable chat architecture.",
+        "A FastAPI-based Retrieval-Augmented Generation (RAG) system that lets you upload PDF files and ask questions about their contents using AI.",
       technologies: [
-        "Next.js",
-        "TypeScript",
-        "WebSockets",
-        "Firebase"
+        "FastAPI",
+        "Python",
+        "LLMs",
+        "OpenAI"
       ],
-      image: "/nexus-chat.png",
-      liveUrl: "#",
+      image: "/nexuspdf.png",
+      liveUrl: "https://nexus-chat-pi.vercel.app/",
       githubUrl: "https://github.com/Hridayansh018/nexus-chat",
       featured: true
     },
