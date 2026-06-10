@@ -5,62 +5,109 @@ const Skills = () => {
   const skillCategories = [
     {
       title: "Frontend Development",
-      skills: ["React", "Next.js", "Vue.js", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "SASS"],
+      skills: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS"
+      ],
       color: "cyber-blue"
     },
     {
-      title: "Backend Development", 
-      skills: ["Node.js", "Python", "Express.js", "PostgreSQL", "MongoDB",],
-      // skills: ["Node.js", "Python", "Express.js", "FastAPI", "PostgreSQL", "MongoDB", "Redis", "GraphQL"],
+      title: "Backend Development",
+      skills: [
+        "Node.js",
+        "Python",
+        "Express.js",
+        "FastAPI",
+        "Django",
+        "Django REST Framework",
+        "PostgreSQL",
+        "MongoDB",
+        "Firebase",
+        "Supabase"
+      ],
       color: "cyber-purple"
     },
-    // {
-    //   title: "Mobile Development",
-    //   skills: ["React Native", "Flutter", "iOS", "Android", "Expo", "Firebase"],
-    //   color: "cyber-green"
-    // },
-    // {
-    //   title: "Cloud & DevOps",
-    //   skills: ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform", "Nginx", "Linux"],
-    //   color: "cyber-pink"
-    // },
+    {
+      title: "AI & Agentic Systems",
+      skills: [
+        "LangChain",
+        "LangGraph",
+        "RAG",
+        "OpenAI",
+        "LLMs",
+        "AI Agents",
+        "Agentic Workflows",
+        "Prompt Engineering",
+        "Vector Search",
+        "Embeddings",
+        "Semantic Search",
+        "Tool Calling",
+        "FAISS",
+        "Document Processing"
+      ],
+      color: "cyber-green"
+    },
     {
       title: "Tools & Technologies",
-      // skills: ["Git", "VS Code", "Figma", "Postman", "Jest", "Cypress", "Webpack", "Vite"],
-      skills: ["Git", "VS Code", "Postman", "Vite"],
+      skills: [
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Postman",
+        "Docker",
+        "Linux",
+        "Vite",
+        "AWS"
+      ],
       color: "cyber-yellow"
     },
     {
       title: "Soft Skills",
-      skills: ["Problem Solving", "Team Leadership", "Agile/Scrum", "Communication", "Project Management"],
+      skills: [
+        "Problem Solving",
+        "Team Leadership",
+        "Communication",
+        "Project Management",
+        "Agile Development"
+      ],
       color: "accent"
     }
   ];
 
   const services = [
     {
-      title: "Web Application Development",
-      description: "Full-stack web applications with modern frameworks and responsive design"
+      title: "Full Stack Development",
+      description:
+        "Building scalable web applications using Next.js, FastAPI, Django REST Framework, PostgreSQL, and modern cloud technologies."
     },
-    // {
-    //   title: "Mobile App Development", 
-    //   description: "Cross-platform mobile applications for iOS and Android"
-    // },
+    {
+      title: "AI & Agentic Applications",
+      description:
+        "Developing AI-powered applications, intelligent assistants, multi-step agent workflows, and LLM-integrated products."
+    },
+    {
+      title: "RAG Systems",
+      description:
+        "Building Retrieval-Augmented Generation systems using LangChain, LangGraph, embeddings, vector databases, and semantic search."
+    },
     {
       title: "API Development & Integration",
-      description: "RESTful APIs, GraphQL services, and third-party integrations"
+      description:
+        "Designing RESTful APIs, backend services, authentication systems, and third-party integrations."
     },
-    // {
-    //   title: "Cloud Solutions",
-    //   description: "Scalable cloud infrastructure and deployment strategies"
-    // },
+    {
+      title: "Real-Time Applications",
+      description:
+        "Developing WebSocket-powered applications with low-latency communication and live collaboration features."
+    },
     {
       title: "Technical Consulting",
-      description: "Architecture planning, code reviews, and technology recommendations"
-    },
-    {
-      title: "UI/UX Implementation",
-      description: "Converting designs into pixel-perfect, interactive user interfaces"
+      description:
+        "Architecture planning, performance optimization, technology selection, and code reviews."
     }
   ];
 
@@ -74,19 +121,28 @@ const Skills = () => {
 
           {/* Skills Section */}
           <div className="mb-20">
-            <h3 className="text-3xl font-rockwell mb-12 text-accent text-center">Technical Skills</h3>
+            <h3 className="text-3xl font-rockwell mb-12 text-accent text-center">
+              Technical Skills
+            </h3>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {skillCategories.map((category, index) => (
-                <Card key={index} className="bg-card border-border">
+                <Card
+                  key={index}
+                  className="bg-card border-border hover:border-primary/50 transition-all duration-300"
+                >
                   <CardHeader>
-                    <CardTitle className={`text-xl font-franklin text-cyber-${category.color}`}>
+                    <CardTitle
+                      className={`text-xl font-franklin text-cyber-${category.color}`}
+                    >
                       {category.title}
                     </CardTitle>
                   </CardHeader>
+
                   <CardContent>
                     <div className="flex flex-wrap gap-2">
                       {category.skills.map((skill, skillIndex) => (
-                        <Badge 
+                        <Badge
                           key={skillIndex}
                           variant="secondary"
                           className="font-tahoma text-xs bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
@@ -103,15 +159,22 @@ const Skills = () => {
 
           {/* Services Section */}
           <div>
-            <h3 className="text-3xl font-rockwell mb-12 text-accent text-center">Services</h3>
+            <h3 className="text-3xl font-rockwell mb-12 text-accent text-center">
+              Services
+            </h3>
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <Card key={index} className="bg-card border-border hover:border-primary/50 transition-all duration-300">
+                <Card
+                  key={index}
+                  className="bg-card border-border hover:border-primary/50 transition-all duration-300 hover:-translate-y-1"
+                >
                   <CardContent className="p-6">
                     <h4 className="text-xl font-franklin font-bold mb-4 text-foreground">
                       {service.title}
                     </h4>
-                    <p className="text-muted-foreground font-tahoma">
+
+                    <p className="text-muted-foreground font-tahoma leading-relaxed">
                       {service.description}
                     </p>
                   </CardContent>
