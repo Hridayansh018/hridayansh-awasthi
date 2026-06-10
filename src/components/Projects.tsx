@@ -7,95 +7,159 @@ const Projects = () => {
   const projects = [
     {
       title: "PulseMail",
-      description: "PulseMail is an AI-powered email automation tool that streamlines outreach, personalizes responses, and manages your inbox with intelligent prioritization",
-      technologies: ["NextJs", "Django Rest Feamework", "Supabase Auth", "SMTp"],
+      description:
+        "AI-powered email automation platform that streamlines outreach, personalizes responses, manages campaigns, and provides intelligent inbox prioritization.",
+      technologies: [
+        "Next.js",
+        "Django REST Framework",
+        "Supabase",
+        "SMTP"
+      ],
       image: "/pulsemail.png",
       liveUrl: "https://pulsemail.vercel.app/",
       githubUrl: "https://github.com/Hridayansh018/pulsemail",
       featured: true
     },
+
+    {
+      title: "AI Resume Analyzer",
+      description:
+        "AI-powered resume analysis platform that calculates ATS scores, extracts skills, identifies keyword gaps, and generates personalized improvement suggestions.",
+      technologies: [
+        "FastAPI",
+        "LangChain",
+        "OpenAI",
+        "Python"
+      ],
+      image: "/resume-analyzer.png",
+      liveUrl: "#",
+      githubUrl: "https://github.com/Hridayansh018/resume-analyzer",
+      featured: true
+    },
+
+    {
+      title: "AI Chatbot",
+      description:
+        "Conversational AI chatbot with context-aware responses, scalable APIs, and architecture designed for future RAG, memory, and tool-calling integrations.",
+      technologies: [
+        "FastAPI",
+        "Python",
+        "LLMs",
+        "OpenAI"
+      ],
+      image: "/ai-chatbot.png",
+      liveUrl: "#",
+      githubUrl: "https://github.com/Hridayansh018/ai_chatbot",
+      featured: true
+    },
+
+    {
+      title: "NeuralDesk",
+      description:
+        "AI-focused productivity platform built with Next.js and TypeScript featuring intelligent workflows, scalable architecture, and reusable components.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "AI",
+        "Tailwind CSS"
+      ],
+      image: "/neuraldesk.png",
+      liveUrl: "#",
+      githubUrl: "https://github.com/Hridayansh018/neuraldesk",
+      featured: true
+    },
+
+    {
+      title: "Mind Sprint",
+      description:
+        "Real-time multiplayer quiz platform supporting 1500+ concurrent users with live leaderboards, team scoring, and low-latency communication.",
+      technologies: [
+        "Next.js",
+        "WebSockets",
+        "TypeScript",
+        "Real-Time Systems"
+      ],
+      image: "/mind-sprint.png",
+      liveUrl: "#",
+      githubUrl: "https://github.com/Hridayansh018/mind-sprint",
+      featured: true
+    },
+
+    {
+      title: "Nexus Chat",
+      description:
+        "Modern real-time messaging platform with responsive UI, live communication, efficient state management, and scalable chat architecture.",
+      technologies: [
+        "Next.js",
+        "TypeScript",
+        "WebSockets",
+        "Firebase"
+      ],
+      image: "/nexus-chat.png",
+      liveUrl: "#",
+      githubUrl: "https://github.com/Hridayansh018/nexus-chat",
+      featured: true
+    },
+
     {
       title: "ToDo App",
-      description: "Collaborative ToDo application with real-time Database.",
-      technologies: ["Next.js", "MongoDB", "Rest API"],
-      image: "/todoapp.png", 
+      description:
+        "Collaborative task management application with real-time database synchronization and responsive user experience.",
+      technologies: [
+        "Next.js",
+        "MongoDB",
+        "REST API"
+      ],
+      image: "/todoapp.png",
       liveUrl: "https://learning-next-sooty.vercel.app/",
       githubUrl: "https://github.com/Hridayansh018/Learning-Next",
       featured: true
-    },
-    {
-      title: "Mobile Fitness Tracker",
-      description: "Cross-platform mobile app for fitness tracking with workout plans, progress monitoring, and social sharing features.",
-      technologies: ["React Native", "Firebase", "GraphQL", "Expo"],
-      image: "/placeholder.svg",
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false
-    },
-    {
-      title: "Real Estate Platform",
-      description: "Property listing platform with advanced search, virtual tours, and agent management system with integrated CRM.",
-      technologies: ["Vue.js", "Python", "FastAPI", "Docker"],
-      image: "/placeholder.svg",
-      liveUrl: "#", 
-      githubUrl: "#",
-      featured: false
-    },
-    {
-      title: "Analytics Dashboard",
-      description: "Business intelligence dashboard with real-time data visualization, custom reports, and automated insights generation.",
-      technologies: ["React", "D3.js", "Python", "PostgreSQL"],
-      image: "/placeholder.svg",
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false
-    },
-    {
-      title: "Social Media Platform",
-      description: "Modern social networking platform with real-time messaging, content sharing, and advanced privacy controls.",
-      technologies: ["Next.js", "WebRTC", "MongoDB", "AWS"],
-      image: "/placeholder.svg",
-      liveUrl: "#",
-      githubUrl: "#",
-      featured: false
     }
   ];
 
-  const featuredProjects = projects.filter(project => project.featured);
-  const otherProjects = projects.filter(project => !project.featured);
+  const featuredProjects = projects.filter(
+    (project) => project.featured
+  );
 
   return (
     <section id="projects" className="py-20 bg-secondary/20">
       <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
+
           <h2 className="text-4xl md:text-5xl font-impact text-center mb-16 text-foreground">
             FEATURED <span className="text-primary">PROJECTS</span>
           </h2>
 
-          {/* Featured Projects */}
-          <div className="grid lg:grid-cols-2 gap-12 mb-20">
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mb-20">
             {featuredProjects.map((project, index) => (
-              <Card key={index} className="bg-card border-border overflow-hidden group hover:border-primary/50 transition-all duration-300">
+              <Card
+                key={index}
+                className="bg-card border-border overflow-hidden group hover:border-primary/50 transition-all duration-300 hover:-translate-y-1"
+              >
                 <div className="aspect-video bg-muted relative overflow-hidden">
-                  <img 
-                    src={project.image} 
+                  <img
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-background/20 group-hover:bg-background/10 transition-all duration-300"></div>
+
+                  <div className="absolute inset-0 bg-background/20 group-hover:bg-background/10 transition-all duration-300" />
                 </div>
+
                 <CardHeader>
-                  <CardTitle className="text-2xl font-franklin text-foreground">
+                  <CardTitle className="text-xl font-franklin text-foreground">
                     {project.title}
                   </CardTitle>
                 </CardHeader>
+
                 <CardContent>
-                  <p className="text-muted-foreground font-tahoma mb-4 leading-relaxed">
+                  <p className="text-muted-foreground font-tahoma mb-4 leading-relaxed text-sm">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
+
+                  <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, techIndex) => (
-                      <Badge 
+                      <Badge
                         key={techIndex}
                         variant="secondary"
                         className="font-tahoma text-xs bg-secondary hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
@@ -105,66 +169,44 @@ const Projects = () => {
                     ))}
                   </div>
                 </CardContent>
-                <CardFooter className="flex gap-4">
-                  <Button variant="outline" size="sm" className="flex items-center gap-2" >
-                    <ExternalLink size={16} />
-                    <a href={project.liveUrl} target="_blank">Live Demo</a>
+
+                <CardFooter className="flex gap-3 mt-auto">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex items-center gap-2"
+                    asChild
+                  >
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink size={16} />
+                      Live Demo
+                    </a>
                   </Button>
-                  <Button variant="outline" size="sm" className="flex items-center gap-2">
-                    <Github size={16} />
-                    <a href={project.githubUrl} target="_blank">Code</a>
+
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="flex items-center gap-2"
+                    asChild
+                  >
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github size={16} />
+                      Code
+                    </a>
                   </Button>
                 </CardFooter>
               </Card>
             ))}
           </div>
 
-          {/* Other Projects */}
-          {/* <div>
-            <h3 className="text-3xl font-rockwell mb-12 text-accent text-center">Other Projects</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {otherProjects.map((project, index) => (
-                <Card key={index} className="bg-card border-border hover:border-primary/50 transition-all duration-300">
-                  <CardHeader>
-                    <CardTitle className="text-xl font-franklin text-foreground">
-                      {project.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground font-tahoma mb-4 text-sm leading-relaxed">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {project.technologies.slice(0, 3).map((tech, techIndex) => (
-                        <Badge 
-                          key={techIndex}
-                          variant="secondary" 
-                          className="font-tahoma text-xs bg-secondary"
-                        >
-                          {tech}
-                        </Badge>
-                      ))}
-                      {project.technologies.length > 3 && (
-                        <Badge variant="secondary" className="font-tahoma text-xs bg-secondary">
-                          +{project.technologies.length - 3}
-                        </Badge>
-                      )}
-                    </div>
-                  </CardContent>
-                  <CardFooter className="flex gap-2">
-                    <Button variant="outline" size="sm" className="flex-1 text-xs">
-                      <ExternalLink size={14} className="mr-1" />
-                      Demo
-                    </Button>
-                    <Button variant="outline" size="sm" className="flex-1 text-xs">
-                      <Github size={14} className="mr-1" />
-                      Code
-                    </Button>
-                  </CardFooter>
-                </Card>
-              ))}
-            </div>
-          </div> */}
         </div>
       </div>
     </section>
